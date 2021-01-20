@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action='/student/' method="post">
+    {% csrf_token %}
+    <p>
+        <label for="sn">姓名：</label><input name='sname' id="sn">
+    </p>
+    <p>
+        <label for="sc">所属班级：</label>
+        <select name='clsname' id="sc">
+            <option value="201">201</option>
+            <option value="202">202</option>
+            <option value="203">203</option>
+        </select>
+    </p>
+    <p>
+        <label for="cour">选课：</label>
+        <input type="checkbox" name='coursname' value="python">python
+        <input type="checkbox" name='coursname' value="vue" >vue
+        <input type="checkbox" name='coursname' value="html5" >html5
+    </p>
+      <p>
+        <input type="submit" value="注册">
+    </p>
+
+
+</form>
+
+</body>
+</html>

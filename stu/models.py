@@ -59,6 +59,6 @@ def registerStu(sname, cname, *coursenames):
         stu = Student.objects.get(sname=sname)
     except Student.DoesNotExist:
         stu = Student.objects.create(sname=sname, cls=cls)
-    # 4插入中间表数据
-    stu.cour.add(*courseList)
+        # 4插入中间表数据
+        stu.cour.add(*courseList)
     return True
